@@ -6,4 +6,16 @@ config ZMK_BACKLIGHT
     help
       Enables support for backlight using PWM.
 
+config ZMK_DISPLAY_STANDBY
+    bool "Enable display standby support"
+    default n
+    help
+      Enables support for display standby.
+
+config ZMK_LED_STANDBY
+    bool "Enable LED standby support"
+    default n
+    help
+      Enables support for LED standby.
+
 endmenu
