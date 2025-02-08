@@ -1,0 +1,9 @@
+menu "Backlight options"
+
+config ZMK_BACKLIGHT
+    bool "Enable backlight support"
+    default y
+    help
+      Enables support for backlight using PWM.
+
+endmenu
