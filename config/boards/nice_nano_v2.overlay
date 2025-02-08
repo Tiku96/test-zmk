@@ -39,3 +39,26 @@
         zmk,underglow = &led_strip;
     };
 };
+
+&spi3 {
+    status = "okay";
+    ssd1306: ssd1306@3c {
+        compatible = "solomon,ssd1306fb-i2c";
+        reg = <0x3c>;
+        label = "SSD1306";
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        precharge-period = <0x1F>;
+        com-pin-config = <0x02>;
+        com-scan-direction = <0>;
+        vcomh-level = <0x40>;
+        clock-frequency = <1000000>;
+        i2c-address-width = <7>;
+        i2c-speed = <I2C_SPEED_STANDARD>;
+        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+    };
+};
